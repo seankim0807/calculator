@@ -1,0 +1,102 @@
+/* General calculator container styling */
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+/* Display styling */
+#display {
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Button grid container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+/* Styling for all buttons */
+button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #333;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Button hover and active states */
+button:hover {
+    background-color: #bbb;
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: #aaa;
+}
+
+/* Styling for operator buttons */
+.operator {
+    background-color: #ff9f43;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #e9891e;
+}
+
+.operator:active {
+    background-color: #d97814;
+}
+
+/* Styling for the "clear" and "equals" buttons */
+#clear {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+#clear:hover {
+    background-color: #e55b5b;
+}
+
+#clear:active {
+    background-color: #cc4b4b;
+}
+
+#equals {
+    background-color: #1dd1a1;
+    color: #fff;
+    grid-column: span 2; /* Make equals button wider */
+}
+
+#equals:hover {
+    background-color: #10ac84;
+}
+
+#equals:active {
+    background-color: #0e8e6b;
+}
+
+/* Adjust button font size for smaller screens */
+@media (max-width: 400px) {
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
